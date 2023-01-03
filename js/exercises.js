@@ -82,13 +82,33 @@
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
-
+  //reverse() breaks down a string into letters, puts them into a new array backwards, then joins the array into a string
+  //reverse('elloh') --> returns 'hello'
+  function reverse(str) {
+    let splitStr = str.split('');
+    let rts = [];
+    splitStr.forEach(letter => rts.unshift(letter));
+    let reversed = rts.join('');
+    return reversed;
+  }
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
+  //findLongestWord() takes an array of words and compares each word's length. 
+  //If the length of the word is more than the current longest, its length becomes the new longest.
+  //findLongestWord(['hi', 'hey', 'hello']) --> returns '5' (hello is 5 letters)
+  function findLongestWord(arr) {
+    let longest = '';
+    arr.forEach(word => {
+      if (word.length > longest) {
+        longest = word.length;
+      }
+    });
 
+    return longest;
+  }
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
