@@ -5,24 +5,30 @@
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
   // ---------------------
 
-function max(num1, num2) {
-  if (num1 > num2) {
-    return num1;
-  } return num2;
-};
+  function max(num1, num2) {
+    if (num1 > num2) {
+      return num1;
+    } return num2;
+  };
 
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
 
-function maxOfThree(n1, n2, n3) {
-  return Math.max(n1, n2, n3);
-};
+  function maxOfThree(n1, n2, n3) {
+    return Math.max(n1, n2, n3);
+  };
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
-
+  function isVowel(letter) {
+    switch(letter) {
+      case 'a': case 'e': case 'i': case 'o': case 'u':
+        return true;
+    };
+    return false;
+  }
 
 
   // ---------------------
