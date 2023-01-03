@@ -5,6 +5,9 @@
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
   // ---------------------
 
+  //Takes two numbers and returns with the larger number
+  //max() compares two numbers and returns the larger one
+  //max(1, 2) --> returns '2'
   function max(num1, num2) {
     if (num1 > num2) {
       return num1;
@@ -15,6 +18,9 @@
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
 
+
+  //maxOfThree() returns the highest number of 3 provided
+  //maxOfThree(1, 2, 3) --> returns '3'
   function maxOfThree(n1, n2, n3) {
     return Math.max(n1, n2, n3);
   };
@@ -22,20 +28,39 @@
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
+  
+  //isVowel() compares an input letter to a list of values, returning true if it is a vowel and false if it's not
+  //isVowel('a') --> returns 'true' // isVowel('b') --> returns 'false'
   function isVowel(letter) {
     switch(letter) {
       case 'a': case 'e': case 'i': case 'o': case 'u':
         return true;
     };
     return false;
-  }
+  };
 
 
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
 
-
+  //rovarspraket() doubles consonants and adds an 'o' between them, ignoring vowels
+  //rovarspraket('hello') --> returns 'hohelollolo' (hello -> hoh e lol lol o)
+  function rovarspraket(string) {
+    let letters = string.split('');
+    const vowels = ['a', 'e', 'i', 'o', 'u', ' '];
+    let newString = ``;
+    letters.forEach(letter => {
+      //if a letter is not a vowel repeat the letter with and 'o'
+      if (!vowels.includes(letter)) {
+        newString += `${letter}o${letter}`;
+      } else {
+        newString += letter;
+      };
+    });
+    // console.log(newString);
+    return newString;
+  };
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
