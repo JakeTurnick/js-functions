@@ -5,8 +5,8 @@
   // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript.
   // ---------------------
 
-  //Takes two numbers and returns with the larger number
   //max() compares two numbers and returns the larger one
+  //num1 and num2 are numbers to compare
   //max(1, 2) --> returns '2'
   function max(num1, num2) {
     if (num1 > num2) {
@@ -20,6 +20,7 @@
 
 
   //maxOfThree() returns the highest number of 3 provided
+  //1, 2, and 3 are numbers to compare
   //maxOfThree(1, 2, 3) --> returns '3'
   function maxOfThree(n1, n2, n3) {
     return Math.max(n1, n2, n3);
@@ -30,6 +31,7 @@
   // ---------------------
   
   //isVowel() compares an input letter to a list of values, returning true if it is a vowel and false if it's not
+  //letter is a given letter to evaluate 
   //isVowel('a') --> returns 'true' // isVowel('b') --> returns 'false'
   function isVowel(letter) {
     switch(letter) {
@@ -45,6 +47,7 @@
   // ---------------------
 
   //rovarspraket() doubles consonants and adds an 'o' between them, ignoring vowels
+  //string is a string to revarspraket-ify
   //rovarspraket('hello') --> returns 'hohelollolo' (hello -> hoh e lol lol o)
   function rovarspraket(string) {
     let letters = string.split('');
@@ -67,12 +70,14 @@
   // ---------------------
 
   //sum() takes an arry and adds each number onto an accumulated total
+  //arr is an array of numbers to be added together
   //sum([1, 2, 3, 4]) --> returns '10'
   function sum(arr) {
     return arr.reduce((accum, curr) => accum + curr);
   }
 
   //multiply() takes an array and multiplies each to an accumulated total
+  //arr is an array of numbers to be multiplied together
   //multiply([1, 2, 3, 4]) --> returns '24'
   function multiply(arr) {
     return arr.reduce((accum, curr) => accum * curr);
@@ -83,6 +88,7 @@
   // ---------------------
 
   //reverse() breaks down a string into letters, puts them into a new array backwards, then joins the array into a string
+  //str is a string that gets split and rebuilt in reverse
   //reverse('elloh') --> returns 'hello'
   function reverse(str) {
     let splitStr = str.split('');
@@ -98,6 +104,7 @@
 
   //findLongestWord() takes an array of words and compares each word's length. 
   //If the length of the word is more than the current longest, its length becomes the new longest.
+  //arr is an array of words whose length gets compared
   //findLongestWord(['hi', 'hey', 'hello']) --> returns '5' (hello is 5 letters)
   function findLongestWord(arr) {
     let longest = '';
@@ -116,6 +123,7 @@
 
   //filterLongWords() takes an array and a limit of characters per word.
   //if a word goes over the cap it is added to a new array which is returned
+  //arr is an array of words to compare the the cap (or 'limit') of characters
   //filterLongWords(['hi', 'hey', 'hello'], 2) --> returns ['hey', 'hello']
   function filterLongWords(arr, cap) {
     let longWords = arr.filter(word =>  word.length > cap);
@@ -126,23 +134,9 @@
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
 
-  /* This works but I'm not satisfied preprograming the letters into the freq object
-  function charFreq(str) {
-    let freq = {
-      a: 0,
-      b: 0,
-      c: 0,
-      d: 0
-    }
-    let splitStr = str.split('');
-    splitStr.forEach(letter => {
-      if (Object.hasOwn(freq, letter)) {
-        freq[letter] += 1;
-      }
-    })
-    console.log(freq);
-  }
-  */
+  //CharFreq takes a string and counts how many times a letter has been added
+  //str is a string of letters that gets split and counted
+  //CharFreq returns and object with letters and their count in the string ie - {a: 5, b: 6, c: 7, etc}
 
   function charFreq(str) {
     let freq = {}
