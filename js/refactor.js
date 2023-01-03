@@ -201,6 +201,17 @@ var callTenTimes = function(callback) {
 // Put your answer below -------------------------
 
 
+var callNTimes = function(callback, n) {
+  for (let i = 0; i < n; i++) {
+    callback();
+  }
+};
+
+/* This is test code
+const call = () => { console.log("hi") }
+callNTimes(call, 5) */
+
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
