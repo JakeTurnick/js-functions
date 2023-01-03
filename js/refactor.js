@@ -33,7 +33,9 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
-
+const doSomethingCool = () => {
+  console.log("Something Cool!");
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
