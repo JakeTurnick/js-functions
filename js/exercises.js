@@ -126,6 +126,36 @@
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
 
+  /* This works but I'm not satisfied preprograming the letters into the freq object
+  function charFreq(str) {
+    let freq = {
+      a: 0,
+      b: 0,
+      c: 0,
+      d: 0
+    }
+    let splitStr = str.split('');
+    splitStr.forEach(letter => {
+      if (Object.hasOwn(freq, letter)) {
+        freq[letter] += 1;
+      }
+    })
+    console.log(freq);
+  }
+  */
+
+  function charFreq(str) {
+    let freq = {}
+    let splitStr = str.split('');
+    splitStr.forEach(letter => {
+      if (Object.hasOwn(freq, letter)) {
+        freq[letter] += 1;
+      } else {
+        freq[letter] = 1;
+      }
+    })
+    return freq;
+  }
 
   
   ////////////////////////////////////////////////////////////////////////
