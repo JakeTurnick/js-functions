@@ -86,6 +86,10 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
+/* ANSWER:
+  [c]: z then y - letter gets reassigned y inside the timeout function and waits to get printed.
+  letter gets reassigned to z and printed, then the timeout prints y
+*/
 
 // -----------------------------------------------
 
@@ -108,7 +112,7 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
-
+return str = str.split('').reverse().join('');
 
 // -----------------------------------------------
 
