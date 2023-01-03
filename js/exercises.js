@@ -66,7 +66,17 @@
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
+  //sum() takes an arry and adds each number onto an accumulated total
+  //sum([1, 2, 3, 4]) --> returns '10'
+  function sum(arr) {
+    return arr.reduce((accum, curr) => accum + curr);
+  }
 
+  //multiply() takes an array and multiplies each to an accumulated total
+  //multiply([1, 2, 3, 4]) --> returns '24'
+  function multiply(arr) {
+    return arr.reduce((accum, curr) => accum * curr);
+  }
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
