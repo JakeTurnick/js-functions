@@ -55,6 +55,7 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+setTimeout(() => alert("Hello, World!"), 2000);
 
 // -----------------------------------------------
 
