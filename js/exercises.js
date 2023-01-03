@@ -114,13 +114,20 @@
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
-
+  //filterLongWords() takes an array and a limit of characters per word.
+  //if a word goes over the cap it is added to a new array which is returned
+  //filterLongWords(['hi', 'hey', 'hello'], 2) --> returns ['hey', 'hello']
+  function filterLongWords(arr, cap) {
+    let longWords = arr.filter(word =>  word.length > cap);
+    return longWords;
+  }
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
 
 
+  
   ////////////////////////////////////////////////////////////////////////
   /////////////////////////DO NOT CHANGE CODE BELOW///////////////////////
   ////////////////////////////////////////////////////////////////////////
