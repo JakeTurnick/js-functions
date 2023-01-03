@@ -296,7 +296,13 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+//Without a default value there is no value to add to the variable speed
+//and a number + undefined = NaN
+var speed = 0;
 
+var accelerate = function(amount = 10) {
+  speed += amount;
+};
 
 // -----------------------------------------------
 
