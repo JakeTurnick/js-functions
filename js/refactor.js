@@ -350,6 +350,21 @@ var callLater = function(timeout, callback) {
 
 // Put your answer below -------------------------
 
+//Unfinished?
+
+var callLater = function(timeout, callback) {
+  //if reversed
+  if (typeof timeout === "function") {
+    console.log(`Timeout:${timeout} // Callback:${callback}`);
+    callback = 10;
+    //reverse callback
+    setTimeout(timeout, callback);
+  } else if (timeout === "undefined") {
+    console.log(`Timeout:${timeout} // Callback:${callback}`);
+    timeout = 10;
+    setTimeout(callback, timeout);
+  }
+};
 
 // -----------------------------------------------
 
